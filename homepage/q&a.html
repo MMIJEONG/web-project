@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="style.css">
+<head>
+   <div style="width:1200px; margin:auto;">
+      <div style="text-align:center; margin-top: 25px;">
+         <a href="index.html"><img src="leaf.png"width="95"height="80"/></a>
+         <title>Go on a Diet </title>
+         <a href="index.html" style="text-decoration: none;">
+         <span style = " font-size:4em;  color: green;">H</span>
+         <span style = " font-size:2.5em;  color: green;">ealthy</span>
+         <span style = " font-size:4em;  color: green;">D</span>
+         <span style = " font-size:2.5em;  color: green;">iet</span></a>
+      </div>
+      <nav>
+           <ul>
+               <li style="margin-left: -25px; font-weight:500; font-size:18px;"><a href="about.html">About</a></li>
+               <li style="margin-left: 90px; font-weight:500; font-size:18px;"><a href="meals.html">Meals</a></li>
+               <li style="margin-left: 90px; font-weight:500; font-size:18px;"><a href="exercise.html">Exercise</a></li>
+               <li style="margin-left: 90px; font-weight:500; font-size:18px;"><a href="check.html">Check</a></li>
+               <li style="margin-left: 90px; font-weight:500; font-size:18px;"><a href="q&a.html">Q&A</a></li>
+           </ul>
+      </nav>
+      <style type="text/css">
+         /* 게시판 리스트 목록 */
+         .sub_news,.sub_news th,.sub_news td{
+            border:0
+         }
+         .sub_news a{
+            color:#383838;
+            text-decoration:none
+         }
+         .sub_news{
+            width:100%;
+            color:#666;
+            font-size:12px;
+            table-layout:fixed
+         }
+         .sub_news caption{
+            display:none
+         }
+         .sub_news th{
+            padding:5px 0 6px;
+            border-top:solid 1px #999;
+            border-bottom:solid 1px #b2b2b2;
+            background-color:#f1f1f4;
+            color:#333;
+            font-weight:bold;
+            line-height:20px;
+            vertical-align:top
+         }
+         .sub_news td{
+            padding:8px 0 9px;
+            border-bottom:solid 1px #d2d2d2;
+            text-align:center;
+            line-height:18px;
+         }
+         .sub_news .date,.sub_news .hit{
+            padding:0;
+            font-family:Tahoma;
+            font-size:11px;
+            line-height:normal
+         }
+         .sub_news .title{
+            text-align:left;
+            padding-left:15px;
+            font-size:13px;
+         }   
+         .sub_news .title .pic,.sub_news .title .new{
+            margin:0 0 2px;
+            vertical-align:middle
+         }
+         .sub_news .title a.comment{
+            padding:0;
+            background:none;
+            color:#f00;
+            font-size:12px;
+            font-weight:bold
+         }
+      </style>
+      <script type="text/javascript">
+         var count = 4;
+         var target_pos=0;
+
+         function add(){
+            var contents = document.getElementById("contents").value;
+            var name = document.getElementById("name").value;
+            var tr = document.createElement("tr");
+            tr.innerHTML ="<td class='contents'  id='"+(++count)+"'>"+contents+"<br></td><td class='name'>"+name+"<button onclick='comment("+count+")'>댓글</button></td>"
+            document.getElementById("go").appendChild(tr);
+            document.getElementById("contents").value = "";
+            document.getElementById("name").value = "";
+         }
+         
+         function comment(target){
+            document.getElementById("comment_div").style.visibility = "visible";
+            target_pos = target;
+         }
+         function insert()
+         {
+            var comment = document.getElementById("comment").value;
+            var span = document.createElement("span");
+            span.innerHTML ="<p>->"+comment+"</p>"
+            document.getElementById(target_pos).appendChild(span);
+            document.getElementById("comment").value = "";
+            document.getElementById("comment_div").style.visibility = "hidden";
+         }
+      </script>   
+   </div>
+</head>
+<body>
+   <div style="width:1150px; margin:auto;">
+      <table class="sub_news" border="1" summary="게시판의 글제목 리스트"style="margin-left:50px;">
+         <caption>게시판 리스트</caption>
+         <colgroup>
+            <col>
+            <col width="110">
+            <col width="100">
+         </colgroup>
+         <thead>
+            <tr>
+            <th style="text-align:center;font-size:13px;" scope="col">제목</th>
+            <th style="font-size:13px;" scope="col">글쓴이</th>
+            </tr>
+         </thead>
+         <tbody id="go">
+         <tr>
+            <td class='contents' id='1'>몸무게는 줄어들어도 뱃살이 안빠져요..뱃살 집중공략하는 법 알려주세요..ㅜㅜ</td>
+            <td class='name'>애행
+            <button onclick='comment("1")'>댓글</button></td>
+         </tr>
+         <tr>
+            <td class='contents' id='2'>일주일동안 최대 몇 키로를 뺄수있나요?5키로?</td>
+            <td class='name'>아하
+            <button onclick='comment("2")'>댓글</button></td>
+         </tr>
+         <tr>
+            <td class='contents' id='3'>식단을 잘 지키려면 어떻게 하나요?동기부여 좀..</td>
+            <td class='name'>호호
+            <button onclick='comment("3")'>댓글</button></td>
+         </tr>
+         <tr>
+            <td class='contents' id='4'>동기부여를 위해 저랑 같이 다이어트하실 분 구해요!</td>
+            <td class='name'>크롱
+            <button onclick='comment("4")'>댓글</button></td>
+         </tr>
+         </tbody>
+      </table>
+      <br><br><br>
+      <div style="text-align:center ">
+         <span style="font-size:14px;">게시글 작성</span><br>
+         <input style="width:500px; height:200px;" type="text" id="contents" placeholder="글 내용">  
+         <br><br>
+         <input style="margin-left:309px;"" type="text" id="name" placeholder="글 쓴이">
+         <input type="button" onclick="add()" value="작성">
+      </div>
+      <br><br><br>
+      <div style="text-align:center; visibility: hidden" id="comment_div">
+         <input style="width:430px; height:80px;" type="text" id="comment" placeholder="댓글 내용">
+         <input type="button" onclick="insert()" value="댓글 작성">
+      </div>
+
+      <br style="clear:both;"><br>
+         <hr>
+         <footer>mijeong.diet@web</footer>
+      <br/>
+   </div>
+</body>
+</html>

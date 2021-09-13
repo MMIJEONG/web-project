@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="style.css">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+       $('.slider').bxSlider();
+      });
+  </script>
+
+  <style type="text/css">
+/* 슬라이더 이미지 크기 설정 css*/
+   .slider img {
+      margin:auto;
+      width: 600px;
+      height: 380px;
+    }
+    .bx-wrapper{
+     border: none;
+     box-shadow: none;
+    }
+  </style>
+
+  <div style="width:1200px; margin:auto;">
+    <div style="text-align:center; margin-top: 25px;">
+        <a href="index.html"><img src="leaf.png"width="95"height="80"/></a>
+        <title>Go on a Diet </title>
+        <a href="index.html" style="text-decoration: none;">
+        <span style = " font-size:4em;  color: green;">H</span>
+        <span style = " font-size:2.5em;  color: green;">ealthy</span>
+        <span style = " font-size:4em;  color: green;">D</span>
+        <span style = " font-size:2.5em;  color: green;">iet</span></a>
+    </div>
+    <nav>
+        <ul>
+           <li style="margin-left: -25px; font-weight:500; font-size:18px;"><a href="about.html">About</a></li>
+           <li style="margin-left: 90px; font-weight:500; font-size:18px;"><a href="meals.html">Meals</a></li>
+           <li style="margin-left: 90px; font-weight:500; font-size:18px;"><a href="exercise.html">Exercise</a></li>
+           <li style="margin-left: 90px; font-weight:500; font-size:18px;"><a href="check.html">Check</a></li>
+           <li style="margin-left: 90px; font-weight:500; font-size:18px;"><a href="q&a.html">Q&A</a></li>
+        </ul>
+    </nav>
+  </div>
+</head>
+<body>
+  <div style="width:1150px; margin:auto;">
+    <div style="width: 70%; height: 460px; float:left;">
+      <div class="slider" style=" cheight: 460px; background-color:#F3F1E9; ">
+        <div><img src="1.jpg"></div>
+        <div><img src="2.jpg"></div>
+        <div><img src="3.jpg"></div>
+      </div>
+    </div>
+    <div align="right">
+      <form action="index.html" style="display: inline-block; padding:40px;  border: 5px solid #2C952C;"  >
+        <h3 align="left">Welcome!</h3>
+        <br>
+        <span style="text-align: left; width:290px; height:40px;">이미정님이 로그인 되어있습니다.</span><br/>
+        <br/>
+        <br>
+        <input type="submit" style="margin-right:30px;width:180px; height:40px; background-color:#4AB34A;color:white;font-size:15px;font-weight:550;"value="로그아웃" />
+      </form>
+    </div>
+    <br>
+    <div align="right">
+      <img src="advert.jpg"width="320"height="200"/>
+    </div>
+    <div>
+      <br>
+      <p style="margin-top:-32px;margin-left: 280px; color:green; font-weight:600; font-size:40px;"><em>Go on a Diet!</em></p>
+    </div>
+    <br style="clear:both;"><br>
+    <hr>
+    <footer>mijeong.diet@web</footer>
+    <br/> 
+  </div>       
+</body>
+</html>

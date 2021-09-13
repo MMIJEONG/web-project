@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <div style="width:1200px; margin:auto;">
+        <div style="text-align:center; margin-top: 25px;">
+            <a href="index.html"><img src="leaf.png"width="95"height="80"/></a>
+            <title>Go on a Diet </title>
+            <span style = " font-size:4em;  color: green;">H</span>
+            <span style = " font-size:2.5em;  color: green;">ealthy</span>
+            <span style = " font-size:4em;  color: green;">D</span>
+            <span style = " font-size:2.5em;  color: green;">iet</span>
+        </div>
+    </div>
+</head>
+<body style="background-color: #F3F1E9;">
+    <div style=" width: 600px; margin-left:30%; ">
+        <div>
+            <h3>아이디</h3>
+                <input type="text" id="id" name="id" style="width: 500px; height: 50px;">
+            <h3>비밀번호</h3>
+                <input type="password" id="pwd1" name="pwd1" style="width: 500px; height: 50px;">
+            <h3>비밀번호 확인</h3>
+                <input type="password" id="pwd2" name="pwd2" style="width: 500px; height: 50px;">
+            <h3>이름</h3>
+                <input type="text" id="name" name="name" style="width: 500px; height: 50px;">
+            <h3>생년월일</h3>
+                <input type="date" id="birth" name="birth" style="width: 500px; height: 50px;">
+            <h3>성별</h3>
+            <select name="gender"style="width: 500px; height: 50px;">
+                <option value="men">남자</option>
+                <option value="women">여자</option>
+            </select><br/>
+            <h3>이메일</label></h3>
+                <input type="text" id="email" name="email" style="width: 500px; height: 50px;">
+            <h3>휴대전화</label></h3>
+                <input type="text" id="phonenum" name="phonenum" style="width: 500px; height: 50px;">
+            <br>   
+            <input onclick="join()"type="submit" style="margin-top: 15px; width:505px; height:50px; background-color:#4AB34A;color:white;font-weight:500;font-size: 18px;"value="가입완료" />   
+        </div>
+    </div>
+    <script type="text/javascript">
+        function join(){
+        alert("가입이 완료되었습니다 :)");
+        window.location.href="index.html";
+    }
+    </script>      
+</body>
+</html>

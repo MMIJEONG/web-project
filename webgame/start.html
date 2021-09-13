@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>game</title>
+</head>
+<body bgcolor="#FFE4E1">
+	<div style="border: 1px solid black; width:700px; height:500px; margin: auto; margin-top: 80px; background-color: #FFD2D7">
+		<p style="margin-left:260px;margin-top:100px;font-size: 30px">도넛 피하기</p>
+		<img style="margin-left:260px;margin-top:5px " src="donut.png" width="160" height="160">
+		<a href="avoid.html"><img id="start" style="margin-left:293px;margin-top:30px " src="start.png" width="100" onmouseover="over()" onmouseout="out()"></a>
+	</div>	
+	<script type="text/javascript">
+		function over()
+		{
+			var img=document.getElementById("start");
+			img.width=110;
+		}
+		function out()
+		{
+			var img=document.getElementById("start");
+			img.width=100;
+		}
+	</script>
+</body>
+</html>
